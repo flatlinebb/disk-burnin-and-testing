@@ -288,7 +288,8 @@ run_badblocks_test()
 #
 #   This is the command which erases all data on the disk:
 #
-    badblocks -b 4096 -wsv -o "$BB_File" /dev/"$Drive"
+#    badblocks -b 4096 -wsv -o "$BB_File" /dev/"$Drive"
+     badblocks -b 4096 -wsv -t random -o "$BB_File" /dev/"$Drive"
   else
     echo_str "Dry run: would run badblocks -b 4096 -wsv -o ${BB_File} /dev/${Drive}"
   fi
