@@ -135,7 +135,7 @@ Drive=$1
 # Set Dry_Run to a non-zero value to test out the script without actually
 # running any tests: set it to zero when you are ready to burn-in disks.
 
-Dry_Run=1
+Dry_Run=0
 
 # Directory specifiers for log and badblocks data files. Leave off the 
 # trailing slash:
@@ -321,10 +321,10 @@ echo_str "Bad blocks file: ${BB_File}"
 
 # Run the test sequence:
 run_short_test
-run_extended_test
+# run_extended_test
 run_badblocks_test
 run_short_test
-run_extended_test
+# run_extended_test
 
 # Emit full device information to log:
 push_header
